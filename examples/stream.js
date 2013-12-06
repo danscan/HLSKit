@@ -54,6 +54,7 @@ async.series([
     playlistSession.appendMP4('./in.mp4', { mediaSequence: 2 }, next);
   },
   function(next) {
+    playlistSession.meta.isAvailable = true;
     playlistSession.appendMP4('./in.mp4', { mediaSequence: 3 }, next);
   },
   function(next) {
