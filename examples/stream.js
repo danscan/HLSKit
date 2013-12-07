@@ -82,13 +82,28 @@ async.series([
     playlistSession.appendMP4('./in.mp4', { mediaSequence: 12 }, next);
   },
   function(next) {
-    playlistSession.appendMP4('./in.mp4', { mediaSequence: 100, shouldFinish: true }, next);
+    playlistSession.appendMP4('./in.mp4', { mediaSequence: 100, }, next);
   },
   function(next) {
     playlistSession.appendMP4('./in.mp4', { mediaSequence: 13 }, next);
   },
   function(next) {
     playlistSession.appendMP4('./in.mp4', { mediaSequence: 14 }, next);
+  },
+  function(next) {
+    playlistSession.appendMP4('./in.mp4', { mediaSequence: 101 }, next);
+  },
+  function(next) {
+    playlistSession.appendMP4('./in.mp4', { mediaSequence: 102 }, next);
+  },
+  function(next) {
+    playlistSession.appendMP4('./in.mp4', { mediaSequence: 103 }, next);
+  },
+  function(next) {
+    playlistSession.appendMP4('./in.mp4', { mediaSequence: 104 }, next);
+  },
+  function(next) {
+    playlistSession.appendMP4('./in.mp4', { mediaSequence: 105, shouldFinish: true }, next);
   },
 ], function(error) {
   if (error) {
