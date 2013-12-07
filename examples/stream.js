@@ -1,5 +1,6 @@
 var HLSKit = require('..'),
-    async = require('async');
+    async = require('async'),
+    debug = require('debug')('stream');
 
 /**
  * configure HLSKit
@@ -45,64 +46,84 @@ console.log('Starting stream simulation!');
 
 async.series([
   function(next) {
+    debug('append 0');
     playlistSession.appendMP4('./in.mp4', { mediaSequence: 0 }, next);
   },
   function(next) {
+    debug('append 1');
     playlistSession.appendMP4('./in.mp4', { mediaSequence: 1 }, next);
   },
   function(next) {
+    debug('append 2');
     playlistSession.appendMP4('./in.mp4', { mediaSequence: 2 }, next);
   },
   function(next) {
+    debug('append 3');
     playlistSession.meta.isAvailable = true;
     playlistSession.appendMP4('./in.mp4', { mediaSequence: 3 }, next);
   },
   function(next) {
+    debug('append 4');
     playlistSession.appendMP4('./in.mp4', { mediaSequence: 4 }, next);
   },
   function(next) {
+    debug('append 5');
     playlistSession.appendMP4('./in.mp4', { mediaSequence: 5 }, next);
   },
   function(next) {
+    debug('append 7');
     playlistSession.appendMP4('./in.mp4', { mediaSequence: 7 }, next);
   },
   function(next) {
+    debug('append 6');
     playlistSession.appendMP4('./in.mp4', { mediaSequence: 6 }, next);
   },
   function(next) {
+    debug('append 8');
     playlistSession.appendMP4('./in.mp4', { mediaSequence: 8 }, next);
   },
   function(next) {
+    debug('append 11');
     playlistSession.appendMP4('./in.mp4', { mediaSequence: 11 }, next);
   },
   function(next) {
+    debug('append 10');
     playlistSession.appendMP4('./in.mp4', { mediaSequence: 10 }, next);
   },
   function(next) {
+    debug('append 12');
     playlistSession.appendMP4('./in.mp4', { mediaSequence: 12 }, next);
   },
   function(next) {
+    debug('append 100');
     playlistSession.appendMP4('./in.mp4', { mediaSequence: 100, }, next);
   },
   function(next) {
+    debug('append 13');
     playlistSession.appendMP4('./in.mp4', { mediaSequence: 13 }, next);
   },
   function(next) {
+    debug('append 14');
     playlistSession.appendMP4('./in.mp4', { mediaSequence: 14 }, next);
   },
   function(next) {
+    debug('append 101');
     playlistSession.appendMP4('./in.mp4', { mediaSequence: 101 }, next);
   },
   function(next) {
+    debug('append 102');
     playlistSession.appendMP4('./in.mp4', { mediaSequence: 102 }, next);
   },
   function(next) {
+    debug('append 103');
     playlistSession.appendMP4('./in.mp4', { mediaSequence: 103 }, next);
   },
   function(next) {
+    debug('append 104');
     playlistSession.appendMP4('./in.mp4', { mediaSequence: 104 }, next);
   },
   function(next) {
+    debug('append 105');
     playlistSession.appendMP4('./in.mp4', { mediaSequence: 105, shouldFinish: true }, next);
   },
 ], function(error) {
