@@ -1,6 +1,6 @@
 {
   "name": "HLSKit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple adaptive-bitrate HTTP Live Streaming: mp4 to mpegts transcoding & m3u8 playlist serialization (with support for stream discontinuities, sliding-window live, and replay playlists).",
   "main": "index.js",
   "scripts": {
@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "async": "~0.2.9",
-    "debug": "~0.7.4"
+    "debug": "~0.7.4",
+    "underscore": "~1.5.2"
   }
 }
