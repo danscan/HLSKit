@@ -1,6 +1,6 @@
 {
   "name": "hls-kit",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Simple adaptive-bitrate HTTP Live Streaming: mp4 to mpegts transcoding & m3u8 playlist serialization (with support for stream discontinuities, sliding-window live, and replay playlists).",
   "main": "index.js",
   "scripts": {
